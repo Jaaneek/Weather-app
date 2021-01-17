@@ -14,7 +14,7 @@ const WeatherCards: React.FC = () => {
   return (
     <Skeleton isLoaded={!loading}>
       <Center>
-        <Box m="5" border="1" w={['340px', '360px', '400px', '900px', '900px']} alignSelf="center">
+        <Box m="5" border="1" w={['340px', '340px', '400px', '900px', '900px']} alignSelf="center">
           <Flex direction="column" w="100%">
             <TemperatureTypeSwitcher
               alignSelf={'flex-end'}
