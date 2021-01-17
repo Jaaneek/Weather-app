@@ -4,7 +4,7 @@ React app that lets you check weather for 5 next days anywhere on earth.
 
 ## Demo
 
-Project is available at [Link](https://home.openweathermap.org/api_keys)
+Project is available at [Link](https://weather-app-liart-three.vercel.app/)
 
 ## Development
 
