@@ -56,7 +56,6 @@ const SearchBar: React.FC<SearchBarProps> = () => {
     });
   };
 
-  // Autosuggest will call this function every time you need to clear suggestions.
   const onSuggestionsClearRequested = () => {
     setSuggestions([]);
   };
@@ -90,7 +89,7 @@ const SearchBar: React.FC<SearchBarProps> = () => {
   };
 
   const inputProps = {
-    placeholder: 'City name',
+    placeholder: 'Wrocław',
     value,
     onChange: onChange,
   };
@@ -122,7 +121,7 @@ const SearchBar: React.FC<SearchBarProps> = () => {
 
   function renderSuggestionsContainer({ containerProps, children }: RenderSuggestionsContainerParams) {
     return (
-      <Box {...containerProps} pos="fixed" w="330px" overflow="hidden">
+      <Box zIndex={1} {...containerProps} pos="fixed" w="330px" overflow="hidden">
         {children}
       </Box>
     );
