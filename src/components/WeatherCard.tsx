@@ -109,17 +109,18 @@ const WeatherBox: React.FC<WeatherBoxProps> = ({
           {date.toLocaleDateString('en-us', { weekday: 'long' })}
         </Box>
         <WeatherCardRow leftChildren={<MaxTemperature />} rightChildren={<MiniTemperature />}></WeatherCardRow>
-        <Divider pt={1} pb={1} />
+        <Separator />
         <WeatherCardRow leftChildren={<DayTemperature />} rightChildren={<NightTemperature />}></WeatherCardRow>
-        <Divider pt={1} pb={1} />
+        <Separator />
         <WeatherCardRow isText={true} leftChildren={<ModeTemperature />} rightChildren={<MeanTemperature />}></WeatherCardRow>
-        <Divider pt={1} pb={1} />
+        <Separator />
         <WeatherCardRow isText={true} leftChildren={<MorningTemperature />} rightChildren={<Humidity />}></WeatherCardRow>
       </Flex>
     </Box>
   );
 };
 
+const Separator = () => <Divider opacity={1} pt={1} pb={1} />;
 interface WeatherCardRowProps {
   leftChildren: ReactNode;
   rightChildren: ReactNode;
