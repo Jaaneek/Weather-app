@@ -3,7 +3,7 @@ import axios from 'axios';
 import { sameDay, findTempByHour, mode, findHumidityByHour, getAvg } from './utils';
 
 const weatherUrl = ({ lat, lng }: GeoData) =>
-  `http://api.openweathermap.org/data/2.5/forecast?appid=${process.env.REACT_APP_WEATHER_API_KEY}&lat=${lat}&lon=${lng}&units=metric`;
+  `https://api.openweathermap.org/data/2.5/forecast?appid=${process.env.REACT_APP_WEATHER_API_KEY}&lat=${lat}&lon=${lng}&units=metric`;
 
 const placesUrl = `https://places-dsn.algolia.net/1/places/query`;
 
