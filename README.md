@@ -10,7 +10,7 @@ Project is available at [Link](https://weather-app-liart-three.vercel.app/)
 
 You have to obtain an api key from [weather api](https://home.openweathermap.org/api_keys)
 
-Create .env at root of project and paste the template with your API KEY
+Create .env at root of a project and paste the template with your API KEY
 
 ```js
 REACT_APP_WEATHER_API_KEY=//Your api key here
