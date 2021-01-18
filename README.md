@@ -18,8 +18,13 @@ REACT_APP_WEATHER_API_KEY=//Your api key here
 
 ## Start
 
-```node
+```
+yarn
 yarn start
+```
+
+```
+npm i
 npm run start
 ```
 
