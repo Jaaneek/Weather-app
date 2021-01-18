@@ -35,7 +35,6 @@ const SearchBar: React.FC<SearchBarProps> = () => {
   const [selected, setSelected] = useState<CityData | null>(null);
   const toast = useToast();
   const { setCity } = useContext(WeatherContext) as IWeatherContext;
-
   // @ts-ignore
   const onChange = (_, { newValue }: { newValue: string }) => {
     setValue(newValue);
@@ -121,14 +120,14 @@ const SearchBar: React.FC<SearchBarProps> = () => {
 
   function renderSuggestionsContainer({ containerProps, children }: RenderSuggestionsContainerParams) {
     return (
-      <Box zIndex={1} {...containerProps} pos="fixed" w="330px" overflow="hidden">
+      <Box zIndex={1} {...containerProps} pos={[null, null, null, 'fixed', 'fixed']} w="330px" overflow="hidden">
         {children}
       </Box>
     );
   }
   return (
     <Center>
-      <FormControl pos="relative" w="330px" id="City searchbar" overflow="hidden">
+      <FormControl w="330px" id="City searchbar" overflow="hidden">
         <FormLabel>City</FormLabel>
         <Autosuggest
           id="Searchbar"
