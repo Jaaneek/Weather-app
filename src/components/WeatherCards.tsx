@@ -12,24 +12,24 @@ const WeatherCards: React.FC = () => {
     return temperatureType === TemperatureEnum.C;
   };
   return (
-    <Skeleton isLoaded={!loading}>
-      <Center>
-        <Box m="5" border="1" w={['340px', '340px', '340px', '900px', '900px']} alignSelf="center">
-          <Flex direction="column" w="100%">
-            <TemperatureTypeSwitcher
-              alignSelf={'flex-end'}
-              aria-label="Weather information dashboard"
-              temperatureType={temperatureType}
-              switchType={() => setTemperatureType(isCelcius() ? TemperatureEnum.F : TemperatureEnum.C)}></TemperatureTypeSwitcher>
-            <Stack direction={['column', 'column', 'column', 'row', 'row']} spacing="24px" justifyContent="space-around" alignItems="center">
-              {weatherList.slice(0, 5).map((x) => (
+    <Center>
+      <Box m="5" border="1" w={['340px', '340px', '340px', '900px', '900px']} alignSelf="center">
+        <Flex direction="column" w="100%">
+          <TemperatureTypeSwitcher
+            alignSelf={'flex-end'}
+            aria-label="Weather information dashboard"
+            temperatureType={temperatureType}
+            switchType={() => setTemperatureType(isCelcius() ? TemperatureEnum.F : TemperatureEnum.C)}></TemperatureTypeSwitcher>
+          <Stack direction={['column', 'column', 'column', 'row', 'row']} spacing="24px" justifyContent="space-around" alignItems="center">
+            {weatherList.slice(0, 5).map((x) => (
+              <Skeleton isLoaded={!loading}>
                 <WeatherCard key={x.date.toString() + x.dayTemperature + x.minValue} format={temperatureType} {...x}></WeatherCard>
-              ))}
-            </Stack>
-          </Flex>
-        </Box>
-      </Center>
-    </Skeleton>
+              </Skeleton>
+            ))}
+          </Stack>
+        </Flex>
+      </Box>
+    </Center>
   );
 };
 
